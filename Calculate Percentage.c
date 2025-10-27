@@ -1,10 +1,13 @@
-#include <stdio.h>
-
-int main() {
-    int totalMarks = 270;
-    int maxMarks = 300;
-    float percentage = (totalMarks * 100.0) / maxMarks;
-
-    printf("Percentage = %.2f%%\n", percentage);
+#include<stdio.h>
+float calculatePercentage(int total, int outof)
+{
+    return (float)total/outof*100;
+}
+int main()
+{
+    int total,outof;
+    printf("Enter Total Marks and Out of: ");
+    scanf("%d%d",&total,&outof);
+    printf("Percentage=%.2f",calculatePercentage(total,outof));
     return 0;
 }
